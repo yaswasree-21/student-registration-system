@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <title>Result</title>
+    </head>
+<body>
+    <h2>Details of the student</h2>
+    <p>Full name = {{fname}} {{lname}}</p>
+    <p>Roll number = {{roll}}</p>
+    <p>Email = {{email}}</p>
+    <p>Phone number = {{phone}}</p>
+    <p>College name = {{college}}</p>
+    <p>Department = {{dept}}</p>
+    <p>Skills : </p>
+    <ul>
+        {% for skill in skills %}
+               <li>{{skill}}</li>
+        {%endfor%}
+    </ul>
+    <p>Additional Comments = {{comments}}</p>
+</body>
+</html>

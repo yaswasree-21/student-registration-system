@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Form</title>
+    <style>
+        body {
+            height: 100vh;
+            margin : 0;
+            background:violet;
+            display:flex;
+            /*!--left to right--*/
+            justify-content:center; 
+                /*!--top to bottom--*/
+            align-items: center
+        }
+        .box {
+            background : white;
+            width : 500px;
+            text-align: center;
+            margin:auto
+        }
+
+        h4 {
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        input[type = "text"]{
+            width: 65%;
+            height: 30px;
+         }
+
+         .dept, .skills {
+            text-align:left ;
+            margin-left: 50px;
+         }
+         
+         textarea {
+            width: 75%;
+            height: 100px;
+        }
+
+        button {
+            color : white;
+            background :green;
+            width : 70px;
+            height : 35px;
+
+        }
+    </style>
+    </head>
+    <body>
+    <div class="box">
+        <h1>Registration Form</h1>
+        <form action="/share" method="POST">
+        <h4>FIRST NAME</h4>
+        <input type="text" name="First name"  placeholder="Enter fname" required><br><br>
+        <h4>LAST NAME</h4>
+        <input type="text" name="Last name" placeholder="Enter Lname" required><br><br>
+        <h4>ROLL NUMBER</h4>
+        <input type="text" name = "Roll number"  placeholder="Enter your roll" required><br><br><h4>EMAIL</h4>
+        <input type = "text" name = "EMail"  placeholder="Enter your MailId" required><br><br>
+        <h4>PHONE NUMBER</h4>
+        <input type = "text" name = "Phone number"  placeholder="Enter mobile number" required><br><br>
+        <h4>COLLEGE NAME</h4>
+        <input type = "text" name = "College name" placeholder="Enter college name" required><br><br>
+
+        <h4>DEPARTMENT</h4>
+        <div class="dept">
+        <input type = radio name = "Department" id ="cse" value="CSE" required>
+        <label for="cse">CSE</label><br><br>
+        <input type = "radio" name = "Department" id = "ece" value="ECE">
+        <label for="ece">ECE</label><br><br>
+        <input type = radio name="Department" value ="MECH" id = "mech">
+        <label for="mech">MECH</label><br><br>
+        <input type = radio name="Department" value="CIVIL" id = "civil">
+        <label for="civil">CIVIL</label><br><br>
+        </div>
+
+        <h4>SKILLS</h4>
+        <div class="skills" >
+        <input type = "checkbox" name = "Skills" value ="PYTHON" id = "python">
+        <label for="python">PYTHON</label><br>
+        <input type = "checkbox" name = "Skills" value ="JAVA" id = "java">
+        <label for="java">JAVA</label><br>
+        <input type = "checkbox" name = "Skills" value ="C++" id = "cpp">
+        <label for="cpp">C++/C</label><br><br>
+        </div>
+
+        <h4>Additional Comments</h4>
+        <textarea name = "comments" placeholder = "Enter additional comments(optional)"></textarea><br><br>
+
+        <button type = "submit">submit</button>
+        </form>
+     </div>   
+    </body>
+</html>
